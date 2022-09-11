@@ -2,16 +2,16 @@
 import data from "./../json/data.json";
 
 // grup ismine göre datayı filtreliyoruz ve reorganize fonksiyonuna gönderiyoruz eğer böyle bir grup yoksa bilgi veriyoruz
-const getGroup = (data, groupName) => {
+const getGroups = (data, groupName) => {
 	const groupMembers = data.filter((item) => item.group === groupName); // grup ismine göre datayı filtreliyoruz
 	if (groupMembers.length > 0) {
-		return reOrganize(groupMembers, groupName); // reorganize fonksiyonuna gönderiyoruz
+		return getGroup(groupMembers, groupName); // getGroup fonksiyonuna gönderiyoruz
 	}
 	console.log('Bu grup için veri yok'); // eğer böyle bir grup yoksa bilgi veriyoruz
 }
 
-// reorganize fonksiyonu datayı grup ismine göre reorganize ediyor
-const reOrganize = (groupMembers, groupName) => {
+// getGroup fonksiyonu datayı grup ismine göre reorganize ediyor
+const getGroup = (groupMembers, groupName) => {
 	// yeni bir data objesi oluşturuyoruz
 	const newData = {
 		group: groupName, // grup ismini atıyoruz
@@ -21,4 +21,4 @@ const reOrganize = (groupMembers, groupName) => {
 	}
 	console.log(newData); // yeni datayı yazdırıyoruz
 }
-getGroup(data, 'SteelBlue'); // data ile SteelBlue grup ismini getGroup fonksiyonuna gönderiyoruz
+getGroups(data, 'SteelBlue'); // data ile SteelBlue grup ismini getGroup fonksiyonuna gönderiyoruz

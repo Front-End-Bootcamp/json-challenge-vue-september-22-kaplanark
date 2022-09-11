@@ -1,7 +1,7 @@
 // kulanacağımız datayı import ediyoruz
 import data from "./../json/data.json";
 
-// grup ismine göre datayı filtreliyoruz ve reorganize fonksiyonuna gönderiyoruz eğer böyle bir grup yoksa bilgi veriyoruz
+// grup ismine göre datayı filtreliyoruz ve getGroup fonksiyonuna gönderiyoruz eğer böyle bir grup yoksa bilgi veriyoruz
 const getGroups = (data, groupName) => {
 	const groupMembers = data.filter((item) => item.group === groupName); // grup ismine göre datayı filtreliyoruz
 	if (groupMembers.length > 0) {

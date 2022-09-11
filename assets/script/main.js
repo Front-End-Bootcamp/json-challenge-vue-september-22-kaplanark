@@ -17,7 +17,7 @@ const reOrganize = (groupMembers, groupName) => {
 		group: groupName, // grup ismini atıyoruz
 		assistant: groupMembers.find((member) => member.type === 'assistant').name, // asistanı buluyoruz
 		students: groupMembers.map((member) => member.type != 'assistant' ? member.name : null).filter((name) => name != null)
-		// burda asistanı hariç tuttmak için type kontrolü yapıyoruz ve asistan adına null atıyoruz ardından null olanları filtreliyoruz ve kalanları students arrayine atıyoruz
+		// burda asistanı hariç tuttmak için type kontrolü yapıyoruz ve asistan adına null atıyoruz ardından null olanları filtreleyip students arrayine atıyoruz
 	}
 	console.log(newData); // yeni datayı yazdırıyoruz
 }

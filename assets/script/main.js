@@ -21,4 +21,4 @@ const reOrganize = (groupMembers, groupName) => {
 	}
 	console.log(newData); // yeni datayı yazdırıyoruz
 }
-getGroup(data, 'SteelBlue'); // data ile SteelBlue grup ismini getGroups fonksiyonuna gönderiyoruz
+getGroup(data, 'SteelBlue'); // data ile SteelBlue grup ismini getGroup fonksiyonuna gönderiyoruz
